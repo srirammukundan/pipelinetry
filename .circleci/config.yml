@@ -6,21 +6,21 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm i
-      - run: npm run lint #json added 
+      - run: sudo npm install
+      - run: sudo npm run lint #json added 
   test:
     docker:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm i
-      - run: npm run test
+      - run: sudo npm i
+      - run: sudo npm run test
   analyze:
     docker:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: npm audit
+      - run: sudo npm audit
 
 workflows:
   my_workflow:
